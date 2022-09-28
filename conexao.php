@@ -1,7 +1,7 @@
 <?php
-// Conecta-se com o MySQL
-mysql_connect("localhost", "root", "root");
+define('HOST', '127.0.0.1');
+define('USUARIO', 'root');
+define('SENHA', 'usbw');
+define('DB', 'autenticacao');
 
-// Seleciona banco de dados
-my_sql_select_db("autenticacao");
-?>
+$conexao = mysqli_connect(HOST, USUARIO, SENHA, DB) or die ('Não foi possível conectar');
